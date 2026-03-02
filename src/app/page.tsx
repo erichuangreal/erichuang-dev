@@ -1,9 +1,8 @@
 // src/app/page.tsx
 
 const links = [
-  { label: "GitHub", href: "#" },    // replace later
-  { label: "LinkedIn", href: "#" },  // replace later
-  { label: "Email", href: "#" },     // replace later (mailto:)
+  { label: "GitHub", href: "https://github.com/erichuangreal" },    // replace later
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/erichuanguw/" },  // replace later
 ];
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
@@ -71,37 +70,31 @@ function ProjectCard({
       <div className="flex items-start justify-between gap-3">
         <h3 className="text-sm font-semibold text-white/90">{title}</h3>
 
-        <div className="flex shrink-0 gap-2">
-          {hasGithub ? (
-            <a
-              href={github}
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/75 transition hover:bg-white/10 hover:text-white"
-            >
-              GitHub
-            </a>
-          ) : (
-            <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/40">
-              GitHub
-            </span>
-          )}
+        {(hasGithub || hasDemo) && (
+          <div className="flex shrink-0 gap-2">
+            {hasGithub && (
+              <a
+                href={github}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/75 transition hover:bg-white/10 hover:text-white"
+              >
+                GitHub
+              </a>
+            )}
 
-          {hasDemo ? (
-            <a
-              href={demo}
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-full border border-blue-300/20 bg-blue-500/15 px-3 py-1 text-xs text-blue-200 transition hover:bg-blue-500/25"
-            >
-              Demo
-            </a>
-          ) : (
-            <span className="rounded-full border border-blue-300/10 bg-blue-500/10 px-3 py-1 text-xs text-blue-300/50">
-              Demo (Coming Soon)
-            </span>
-          )}
-        </div>
+            {hasDemo && (
+              <a
+                href={demo}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full border border-blue-300/20 bg-blue-500/15 px-3 py-1 text-xs text-blue-200 transition hover:bg-blue-500/25"
+              >
+                Demo
+              </a>
+            )}
+          </div>
+        )}
       </div>
 
       <p className="mt-2 text-sm text-white/65">{description}</p>
@@ -169,32 +162,49 @@ export default function Page() {
           <Section title="Projects">
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
               <ProjectCard
-                title="TopSet"
-                description="A full-stack workout analytics platform that transforms raw user input into structured insights and adaptive coaching logic."
-                tags={["React", "Node.js", "MySQL", "Analytics"]}
-                github="#"
-                demo="#"
+                title="PerspectiveConnect"
+                description="A speech analysis pipeline extracting acoustic features and integrating LLM-based feedback for real-time presentation coaching."
+                tags={["Python", "Pandas", "MySQL", "LLM"]}
+                github="https://github.com/erichuangreal/perspectiveconnect"
+                demo="https://pc.appfounder.ca/"
               />
               <ProjectCard
                 title="GrowWiseAI"
                 description="An ML-driven tree survivability system combining predictive modeling with real-world environmental data and explainable AI."
                 tags={["Python", "XGBoost", "Scikit-learn", "Gemini API"]}
-                github="#"
-                demo="#"
+                github="https://github.com/erichuangreal/GrowWiseAI"
+                demo="https://github.com/erichuangreal/GrowWiseAI"
               />
               <ProjectCard
-                title="AI Speech Training System"
-                description="A speech analysis pipeline extracting acoustic features and integrating LLM-based feedback for real-time presentation coaching."
-                tags={["Python", "Pandas", "MySQL", "LLM"]}
-                github="#"
-                demo="#"
+                title="TopSet"
+                description="A full-stack workout analytics platform that transforms raw user input into structured insights and adaptive coaching logic."
+                tags={["React", "Node.js", "MySQL", "Analytics"]}
+                github="https://github.com/erichuangreal/Topset"
+                demo="https://topset.erichuangreal.dev/"
+              />
+              <ProjectCard
+                title="Upright"
+                description="Real-time posture monitoring system using motion sensors and a 3D digital twin to deliver intelligent alignment feedback."
+                tags={["JavaScript", "Sensors", "3D"]}
+                github="https://github.com/erichuangreal/Upright"
+                demo="https://upright.erichuangreal.dev/"
+              />
+              <ProjectCard
+                title="circadia"
+                description="Arduino-based hospital environment control system using sensors, PWM, and MOSFET power stages for real-time sound, lighting, and heating regulation."
+                tags={["C/C++", "Arduino", "Embedded"]}
+                github="https://github.com/erichuangreal/circadia"
+              />
+              <ProjectCard
+                title="maxaboard-embedded-linux-metal-detector"
+                description="Custom Yocto-based embedded Linux distribution with BitBake, OP-TEE integration, and kernel-level debugging for MaxABoard deployment."
+                tags={["Embedded Linux", "Yocto", "C"]}
+                github="https://github.com/erichuangreal/maxaboard-embedded-linux-metal-detector"
               />
               <ProjectCard
                 title="WARG Autonomy Stack"
                 description="A ROS2-based autonomy system integrating perception, navigation, and deployment-ready CI workflows for aerial robotics."
                 tags={["ROS2", "Docker", "YOLO", "Computer Vision"]}
-                github="#"
-                demo="#"
               />
             </div>
           </Section>
