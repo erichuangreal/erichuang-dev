@@ -173,14 +173,7 @@ export default function Page() {
                 description="An ML-driven tree survivability system combining predictive modeling with real-world environmental data and explainable AI."
                 tags={["Python", "XGBoost", "Scikit-learn", "Gemini API"]}
                 github="https://github.com/erichuangreal/GrowWiseAI"
-                demo="https://github.com/erichuangreal/GrowWiseAI"
-              />
-              <ProjectCard
-                title="TopSet"
-                description="A full-stack workout analytics platform that transforms raw user input into structured insights and adaptive coaching logic."
-                tags={["React", "Node.js", "MySQL", "Analytics"]}
-                github="https://github.com/erichuangreal/Topset"
-                demo="https://topset.erichuangreal.dev/"
+                demo="https://growwiseai.erichuangreal.dev/"
               />
               <ProjectCard
                 title="Upright"
@@ -188,6 +181,13 @@ export default function Page() {
                 tags={["JavaScript", "Sensors", "3D"]}
                 github="https://github.com/erichuangreal/Upright"
                 demo="https://upright.erichuangreal.dev/"
+              />
+              <ProjectCard
+                title="TopSet"
+                description="A full-stack workout analytics platform that transforms raw user input into structured insights and adaptive coaching logic."
+                tags={["React", "Node.js", "MySQL", "Analytics"]}
+                github="https://github.com/erichuangreal/Topset"
+                demo="https://topset.erichuangreal.dev/"
               />
               <ProjectCard
                 title="circadia"
@@ -199,7 +199,7 @@ export default function Page() {
                 title="maxaboard-embedded-linux-metal-detector"
                 description="Custom Yocto-based embedded Linux distribution with BitBake, OP-TEE integration, and kernel-level debugging for MaxABoard deployment."
                 tags={["Embedded Linux", "Yocto", "C"]}
-                github="https://github.com/erichuangreal/maxaboard-embedded-linux-metal-detector"
+                github="https://github.com/erichuangreal/maaxboard-embedded-linux-metal-detector"
               />
               <ProjectCard
                 title="WARG Autonomy Stack"
